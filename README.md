@@ -18,6 +18,7 @@ This enhanced edition includes bug fixes, stability improvements, and Android 14
 *   **Multi-Architecture**: Support for 32-bit and 64-bit apps.
 *   **Device Spoofing**: Modify device information for virtual apps.
 *   **Fake Location**: Spoof GPS coordinates.
+*   **Virtual Camera**: Replace real camera with fake video/image sources for virtual apps.
 
 ## Requirements
 
