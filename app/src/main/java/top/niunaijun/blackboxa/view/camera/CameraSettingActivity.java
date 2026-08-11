@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import top.niunaijun.blackbox.entity.camera.BCameraConfig;
 import top.niunaijun.blackbox.entity.camera.BFakeCamera;
 import top.niunaijun.blackbox.fake.frameworks.BCameraManager;
-import top.niunaijun.blackbox.app.BActivityThread;
 import top.niunaijun.blackboxa.R;
 import top.niunaijun.blackboxa.databinding.ActivityCameraSettingsBinding;
 

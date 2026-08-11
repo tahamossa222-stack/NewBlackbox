@@ -12,9 +12,9 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.HashMap;
 
-import top.niunai.blackbox.core.env.BEnvironment;
-import top.niunai.blackbox.core.system.ISystemService;
-import top.niunai.blackbox.entity.camera.BCameraConfig;
+import top.niunaijun.blackbox.core.env.BEnvironment;
+import top.niunaijun.blackbox.core.system.ISystemService;
+import top.niunaijun.blackbox.entity.camera.BCameraConfig;
 import top.niunaijun.blackbox.entity.camera.BFakeCamera;
 import top.niunaijun.blackbox.fake.frameworks.BCameraManager;
 import top.niunaijun.blackbox.utils.CloseUtils;
@@ -43,7 +43,7 @@ public class BCameraManagerService extends IBCameraManagerService.Stub implement
             BCameraConfig config = pkgs.get(pkg);
             if (config == null) {
                 config = new BCameraConfig();
-                config.pattern = BFakeCamera.DISABLED;
+                config.pattern = BCameraManager.CLOSE_MODE;
                 pkgs.put(pkg, config);
             }
             return config;
@@ -68,13 +68,15 @@ public class BCameraManagerService extends IBCameraManagerService.Stub implement
 
     @Override
     public BFakeCamera getFakeCamera(int userId, String pkg) {
-        BCameraConfig config = getOrCreateConfig(userId, pkg);
-        if (config.pattern == BCameraManager.OWN_MODE) {
-            return config.fakeCamera;
-        } else if (config.pattern == BCameraManager.GLOBAL_MODE) {
-            return mGlobalConfig.fakeCamera;
+        synchronized (mCameraConfigs) {
+            BCameraConfig config = getOrCreateConfig(userId, pkg);
+            if (config.pattern == BCameraManager.OWN_MODE) {
+                return config.fakeCamera;
+            } else if (config.pattern == BCameraManager.GLOBAL_MODE) {
+                return mGlobalConfig.fakeCamera;
+            }
+            return null;
         }
-        return null;
     }
 
     @Override
@@ -133,7 +135,7 @@ public class BCameraManagerService extends IBCameraManagerService.Stub implement
     @Override
     public boolean isFakeCameraEnable(int userId, String pkg) {
         BCameraConfig config = getOrCreateConfig(userId, pkg);
-        return config.enabled && config.pattern != BFakeCamera.DISABLED;
+        return config.enabled && config.pattern != BCameraManager.CLOSE_MODE;
     }
 
     @Override

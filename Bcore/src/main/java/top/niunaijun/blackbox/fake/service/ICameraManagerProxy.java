@@ -1,11 +1,9 @@
 package top.niunaijun.blackbox.fake.service;
 
 import android.content.Context;
-import android.hardware.camera2.CameraManager;
 import android.util.Log;
 
 import java.lang.reflect.Method;
-import java.util.Arrays;
 
 import black.android.os.BRServiceManager;
 import top.niunaijun.blackbox.app.BActivityThread;
