@@ -14,6 +14,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/fake_camera"
+        android:title="@string/fake_camera"
+        app:showAsAction="never" />
+
+    <item
             android:id="@+id/main_git"
             android:title="@string/open_source_path"
             app:showAsAction="never" />

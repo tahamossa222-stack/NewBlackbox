@@ -67,4 +67,24 @@
     <string name="disable_gms">Disable Service</string>
     <string name="disable_gms_hint">Clear the current Google service environment? Google service data will be cleared.</string>
     <string name="no_gms">Currently, there is no Google service environment on mobile phones.</string>
+    <string name="fake_camera">Fake Camera</string>
+    <string name="real_camera">Real Camera</string>
+    <string name="close_fake_camera">Disable Fake Camera</string>
+    <string name="close_app_fake_camera">Disable Fake Camera for %s</string>
+    <string name="close_fake_camera_success">Disable Fake Camera for %s Successfully</string>
+    <string name="camera_protection">Camera Protection</string>
+    <string name="enable_fake_camera">Enable Fake Camera</string>
+    <string name="protection_method">Protection Method</string>
+    <string name="source_path">Source Path</string>
+    <string name="select_file">Select File</string>
+    <string name="resolution">Resolution</string>
+    <string name="enable_audio">Enable Audio</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="settings_saved">Settings saved successfully</string>
+    <string name="disable_camera">Disable Camera</string>
+    <string name="local_video">Local Video</string>
+    <string name="network_stream">Network Stream</string>
+    <string name="local_image">Local Image</string>
+    <string name="jump_camera">Go to Camera Manager</string>
+    <string name="camera_manager">Camera Manager</string>
 </resources>

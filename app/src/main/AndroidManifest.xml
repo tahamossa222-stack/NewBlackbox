@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="29" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 
     <application
@@ -41,6 +43,8 @@
         </activity>
         <activity android:name=".view.list.ListActivity" />
         <activity android:name=".view.fake.FakeManagerActivity" />
+        <activity android:name=".view.camera.FakeCameraManagerActivity" />
+        <activity android:name=".view.camera.CameraSettingActivity" />
 
         <activity
             android:name=".view.main.ShortcutActivity"

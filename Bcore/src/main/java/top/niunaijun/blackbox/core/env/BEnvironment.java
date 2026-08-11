@@ -67,6 +67,10 @@ public class BEnvironment {
         return new File(getSystemDir(), "fake-location.conf");
     }
 
+    public static File getFakeCameraConf() {
+        return new File(getSystemDir(), "fake-camera.conf");
+    }
+
     public static File getPackageConf(String packageName) {
         return new File(getAppDir(packageName), "package.conf");
     }

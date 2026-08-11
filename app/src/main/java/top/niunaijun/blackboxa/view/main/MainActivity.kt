@@ -23,6 +23,7 @@ import top.niunaijun.blackboxa.util.inflate
 import top.niunaijun.blackboxa.view.apps.AppsFragment
 import top.niunaijun.blackboxa.view.base.LoadingActivity
 import top.niunaijun.blackboxa.view.fake.FakeManagerActivity
+import top.niunaijun.blackboxa.view.camera.FakeCameraManagerActivity
 import top.niunaijun.blackboxa.view.list.ListActivity
 import top.niunaijun.blackboxa.view.setting.SettingActivity
 
@@ -422,6 +423,9 @@ class MainActivity : LoadingActivity() {
                     val intent = Intent(this, FakeManagerActivity::class.java)
                     intent.putExtra("userID", 0)
                     startActivity(intent)
+                }
+                R.id.fake_camera -> {
+                    FakeCameraManagerActivity.start(this)
                 }
             }
 
